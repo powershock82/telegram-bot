@@ -1,2 +1,2 @@
 python-telegram-bot
-google_genai
+google-genai
