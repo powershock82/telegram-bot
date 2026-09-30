@@ -25,7 +25,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         system_instruction}, {"role": "user", "content": user_message}]) 
            
                 
-            }
+           
         )
         reply_text = response.choices\[0\].message.content
     except Exception as e:
