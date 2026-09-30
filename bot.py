@@ -30,7 +30,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         reply_text = response.text
     except Exception as e:
-        reply_text = "Ops, ho avuto un piccolo blackout mentale! Riprova tra un attimo."
+        reply_text = "Ops, sono ubriaco e mi si sono incrociate le spade! Riprova tra un attimo."
 
     await update.message.reply_text(reply_text)
 
