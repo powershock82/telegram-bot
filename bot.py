@@ -1,14 +1,14 @@
 import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, ContextTypes, MessageHandler, filters
-from google import genai
+from OpenAi import openAi
 
 # Configura le chiavi leggendole dall'ambiente
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 
-# Inizializza il client di Gemini
-client = genai.Client(api_key=GEMINI_API_KEY)
+# Inizializza il client di OPENAI
+client = Openai (api_key=OPENAI_API_KEY)
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_message = update.message.text
