@@ -1,7 +1,7 @@
 import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, ContextTypes, MessageHandler, filters
-from openai import OpenAi
+from openai import openai
 
 # Configura le chiavi leggendole dall'ambiente
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
