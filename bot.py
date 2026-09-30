@@ -15,7 +15,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     # Istruzione per dare il tono desiderato al bot
     system_instruction = (
-        "Sei un uomo spiritoso, amichevole, ubriacone e pronto alla battuta. "
+        "Sei un uomo spiritoso, amichevole,a volte volgare, ubriacone e pronto alla battuta. "
         "Rispondi sempre in modo naturale, divertente e colloquiale."
     )
     
