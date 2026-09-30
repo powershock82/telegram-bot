@@ -20,15 +20,14 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
     
     try:
-        # Richiesta a Gemini usando il modello standard
-        response = client.models.generate_content(
-            model='gemini-2.5-flash',
-            contents=user_message,
-            config={
-                'system_instruction': system_instruction,
+        # Richiesta a openai usando il modello standard
+        response = client.chat.completions.create(model="gpt-4o-mini", messages=[{"role": "system", "content": 
+        system_instruction}, {"role": "user", "content": user_message}]) 
+           
+                
             }
         )
-        reply_text = response.text
+        reply_text = response.choices\[0\].message.content
     except Exception as e:
         reply_text = "Ops, sono ubriaco e mi si sono incrociate le spade! Riprova tra un attimo."
 
