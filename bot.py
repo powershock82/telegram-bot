@@ -34,7 +34,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text(reply_text)
 
-if name == 'main':
+if __name__== '__main__':
     app = ApplicationBuilder().token(TELEGRAM_TOKEN).build()
     
     # Ascolta tutti i messaggi di testo
